@@ -47,18 +47,5 @@ function watch(){
     gulp.watch('*.js', js).on('change', browserSync.reload);
 }
 
-// function watch(){
-//     gulp.watch('*.js', js);
-//     gulp.watch('*.less', gulp.series(lessStyle,css));
-//     gulp.watch('*.css', css);
-// }
-
-
-// gulp.task('default', gulp.series(gulp.parallel(js,lessStyle),css));
-// gulp.task('watch', gulp.series(watch, browser_sync))
-
-// exports.jsFile = jsFile;
-// exports.lessStyle = lessStyle;
-// exports.cssStyle = gulp.series(lessStyle,cssStyle);
 exports.default = gulp.series(gulp.parallel(js,lessStyle),css);
 exports.watch = watch;
