@@ -8,7 +8,7 @@ const cssClean = require('gulp-clean-css');
 const browserSync = require('browser-sync').create();
 
 function js(){
-    return gulp.src(['*.js','!gulpfile.js'])
+    return gulp.src(['*.js'])
       .pipe(terser())
       .pipe(rename({suffix:'.min'}))
       .pipe(gulp.dest('dist/'));
